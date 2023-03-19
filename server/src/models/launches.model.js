@@ -11,7 +11,7 @@ const launch = {
   destination: "Kepler-442 b",
   customer: ["NASA"],
   upcoming: true,
-  success: true,
+  success: true
 };
 
 launches.set(launch.flightNumber, launch);
@@ -30,7 +30,7 @@ function addNewLaunch(launch) {
       customer: ["NASA", "SpaceX"],
       upcoming: true,
       success: true,
-      flightNumber: latestFlightNumber,
+      flightNumber: latestFlightNumber
     })
   );
 }

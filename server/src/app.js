@@ -30,11 +30,11 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 // we use "*" --> so that it matches all routes from the code in the client-side
-app.get("/", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
-app.use(planetsRouter);
-app.use(launchesRouter);
+app.use("/planets", planetsRouter);
+app.use("/launches", launchesRouter);
 
 module.exports = app;
