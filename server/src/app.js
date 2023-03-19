@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 const planetsRouter = require("./routes/planets/planets.router");
+const launchesRouter = require("./routes/launches/launches.router");
 
 // ---------------Middlewares--------------- //
 
@@ -34,5 +35,6 @@ app.get("/", (req, res) => {
 });
 
 app.use(planetsRouter);
+app.use(launchesRouter);
 
 module.exports = app;
