@@ -13,6 +13,11 @@ const launch = {
 
 launches.set(launch.flightNumber, launch);
 
+function getAllLaunches() {
+  // Map is not JS object notation, By extracting these values into Array we can Manipulate the map data into JSON data format
+  return Array.from(launches.values());
+}
+
 module.exports = {
-  launches,
+  getAllLaunches,
 };
