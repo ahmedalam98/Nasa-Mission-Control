@@ -29,12 +29,12 @@ app.use(express.json());
 //Serve static files inside production directory
 app.use(express.static(path.join(__dirname, "..", "public")));
 
+app.use("/planets", planetsRouter);
+app.use("/launches", launchesRouter);
+
 // we use "*" --> so that it matches all routes from the code in the client-side
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
-
-app.use("/planets", planetsRouter);
-app.use("/launches", launchesRouter);
 
 module.exports = app;
