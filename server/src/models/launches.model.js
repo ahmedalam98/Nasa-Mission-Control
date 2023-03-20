@@ -1,21 +1,23 @@
 const launches = new Map();
 
 // Add state to our server
-const latestFlightNumber = 100;
+let latestFlightNumber = 100;
 
 const launch = {
   flightNumber: 100,
-  launchDate: new Date("December 27 2030"),
   mission: "Kepler Exploration X",
   rocket: "Explorer IS1",
-  destination: "Kepler-442 b",
-  customer: ["NASA"],
+  launchData: new Date("December 27, 2030"),
+  target: "Kepler-442 b",
+  customer: ["ZTM", "NASA"],
   upcoming: true,
-  success: true
+  success: true,
 };
 
+// we use flightNumber as a key as it's Unique
 launches.set(launch.flightNumber, launch);
 
+// to make the model responsible of outputing clean and ready data
 function getAllLaunches() {
   // Map is not JS object notation, By extracting these values into Array we can Manipulate the map data into JSON data format
   return Array.from(launches.values());
@@ -27,10 +29,10 @@ function addNewLaunch(launch) {
     // Assign the latestFlightNumber as a key for new launch
     latestFlightNumber,
     Object.assign(launch, {
-      customer: ["NASA", "SpaceX"],
-      upcoming: true,
       success: true,
-      flightNumber: latestFlightNumber
+      upcoming: true,
+      customer: ["ZTM", "NASA"],
+      flightNumber: latestFlightNumber,
     })
   );
 }
