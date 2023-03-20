@@ -18,8 +18,10 @@ app.use(
   })
 );
 
+/* Temporary Disabled
 // HTTP request logger middleware
 app.use(morgan("combined"));
+*/
 
 // Using express middleware to parse incoming JSON from incoming requests body
 app.use(express.json());
