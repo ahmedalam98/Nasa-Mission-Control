@@ -7,11 +7,15 @@
   "license": "ISC",
   "description": "NASA MISSION CONTROL",
   "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
     "start": "node src/server.js",
     "watch": "nodemon src/server.js"
   },
   "devDependencies": {
-    "nodemon": "^2.0.21"
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.21",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
