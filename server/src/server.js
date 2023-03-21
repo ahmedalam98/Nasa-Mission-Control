@@ -22,8 +22,8 @@ mongoose.connection.on("error", (err) => {
 async function startServer() {
   // Connecting to MongoDB
   await mongoose.connect(MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   });
   // Waiting for data promise to resolve before listening to requests in server
   await loadPlanetsData();
