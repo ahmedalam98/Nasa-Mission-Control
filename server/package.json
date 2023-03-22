@@ -6,8 +6,11 @@
   "author": "",
   "license": "ISC",
   "description": "NASA MISSION CONTROL",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch",
     "start": "node src/server.js",
     "watch": "nodemon src/server.js",
