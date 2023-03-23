@@ -2,18 +2,46 @@ const launchesDatabase = require("./launches.mongo");
 const planets = require("./planets.mongo");
 
 /// Development Hard-coded launch-data
-const launch = {
-  flightNumber: 100,
-  mission: "Kepler Exploration X",
-  rocket: "Explorer IS1",
-  launchData: "December 27, 2030",
-  target: "Kepler-452 b",
-  customers: ["ZTM", "NASA"],
-  upcoming: true,
-  success: true,
-};
+// const launch = {
+//   flightNumber: 100, // flight_number
+//   mission: "Kepler Exploration X", // name
+//   rocket: "Explorer IS1", // rocket.name
+//   launchData: new Date("December 27, 2030"), // date_local
+//   target: "Kepler-442 b", // not applicable
+//   customers: ["ZTM", "NASA"], // payload.customers for each payload
+//   upcoming: true, // upcoming
+//   success: true, // success
+// };
 
 saveLaunch(launch);
+
+//--------GETTING ALL PREVIOS LAUNCHES (REAL-LIFE DATA)--------//
+// from: https://github.com/r-spacex/SpaceX-API/tree/master/docs#rspacex-api-docs
+const SPACEX_API_URL = "https://api.spacexdata.com/v4/launches/query";
+
+async function loadlLaunchesData() {
+  console.log("downloading launch data...");
+  const response = await axios.post(SPACEX_API_URL, {
+    // options to get rocket's name
+    query: {},
+    options: {
+      populate: [
+        {
+          path: "rocket",
+          select: {
+            name: 1,
+          },
+        },
+        {
+          path: "payloads",
+          select: {
+            customers: 1,
+          },
+        },
+      ],
+    },
+  });
+}
 
 async function existsLaunchWithId(launchId) {
   return await launchesDatabase.findOne({
@@ -93,4 +121,5 @@ module.exports = {
   getAllLaunches,
   scheduleNewLaunch,
   abortLaunchById,
+  loadlLaunchesData,
 };
