@@ -50,7 +50,7 @@ async function populateLaunches() {
   }
 
   const launchDocs = response.data.docs;
-  for (const launchDoc of launchDocs) {
+  launchDocs.forEach(async (launchDoc) => {
     const payloads = launchDoc["payloads"];
     const customers = payloads.flatMap((payload) => {
       return payload["customers"];
@@ -65,11 +65,9 @@ async function populateLaunches() {
       success: launchDoc["success"],
       customers,
     };
-
-    console.log(`${launch.flightNumber}, ${launch.mission}`);
-
+    // populate launches collection
     await saveLaunch(launch);
-  }
+  });
 }
 
 async function loadLaunchData() {
