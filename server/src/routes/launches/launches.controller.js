@@ -6,6 +6,8 @@ const {
 } = require("../../models/launches.model");
 
 async function httpGetAllLaunches(req, res) {
+  const { skip, limit } = getPgination(req.query); // getting the query parameters
+  const launches = await getAllLaunches(skip, limit);
   return res.status(200).json(await getAllLaunches());
 }
 

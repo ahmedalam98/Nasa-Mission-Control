@@ -110,9 +110,13 @@ async function getLatestFlightNumber() {
 
 // using mongoDB
 // to make the model responsible of outputing clean and ready data
-async function getAllLaunches() {
+async function getAllLaunches(skip, limit) {
   // return Array.from(launches.values());
-  return await launchesDatabase.find({}, { _id: 0, __v: 0 });
+  return await launchesDatabase
+    .find({}, { _id: 0, __v: 0 })
+    .sort({ flightNumber: 1 })
+    .skip(skip)
+    .limit(limit); // Find all documents without showing the id or version-key in the response + apply pagination using (limit & skip) query parameters
 }
 
 async function saveLaunch(launch) {
