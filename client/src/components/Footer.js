@@ -6,8 +6,17 @@ const Footer = () => {
     <ArwesFooter animate>
       <Centered>
         <Paragraph style={{ fontSize: 14, margin: "10px 0" }}>
-          This is not an official site and is not affiliated with NASA or SpaceX
-          in any way.
+          Created by :
+          <a
+            style={{
+              color: "inherit",
+              marginLeft: "5px",
+            }}
+            href="https://github.com/ahmedalam98"
+            target="blank"
+          >
+            Ahmed Alam El-Deen
+          </a>
         </Paragraph>
       </Centered>
     </ArwesFooter>

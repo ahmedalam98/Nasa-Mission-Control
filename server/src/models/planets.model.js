@@ -57,7 +57,7 @@ async function getAllPlanets() {
 
 async function savePlanet(planet) {
   try {
-    // soving data to mongo instead of array with upsert (insert + update)
+    // saving data to mongo instead of array with upsert (insert + update)
     await planets.updateOne(
       {
         // the filter
