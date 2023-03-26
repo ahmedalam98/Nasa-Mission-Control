@@ -40,7 +40,7 @@
 ## About The Project
 
 NASA dashboard app for managing and monitoring spaceflights to habitable planets in the observable universe.
-![Preview](./img/preview 1.png)
+![Preview](./img/preview%201.png)
 
 ## Built with :
 
@@ -53,7 +53,7 @@ NASA dashboard app for managing and monitoring spaceflights to habitable planets
 
 ## Architecture Diagram
 
-![Architecture Diagram](./img/Architecture -Diagram.png)
+![ArchitectureDiagram](./img/Architecture%20-Diagram.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
