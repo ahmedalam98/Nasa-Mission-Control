@@ -6,14 +6,21 @@
 ![express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 
-<h1 align="center">
-  <br>
-  <img src="./client/public/favicon.png" alt="project logo" width="80">
-  <br>
-  NASA-Mission-Control
-  <br>
-</h1>
+<div align="center">
+  <a href="http://3.86.163.177:8000/">
+    <img src="./client/public/favicon.png" alt="project logo" width="80">
+  </a>
+  <h1>NASA-Mission-Control</h1>
+  <p align="center">
+  <a href="http://3.86.163.177:8000/">View Demo</a>
+    ·
+    <a href="https://github.com/ahmedalam98/Nasa-Mission-Control/issues">Report Bug</a>
+  </p>
+  
+</div>
 
 <details>
   <summary>Table of Contents</summary>
@@ -33,6 +40,7 @@
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#issues">Issues</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -42,7 +50,7 @@
 NASA dashboard app for managing and monitoring spaceflights to habitable planets in the observable universe.
 ![Preview](./img/preview%201.png)
 
-## Built with :
+## Built with
 
 - Javascript
 - React
@@ -50,6 +58,8 @@ NASA dashboard app for managing and monitoring spaceflights to habitable planets
 - Express
 - MongoDB
 - Jest
+- Docker
+- AWS
 
 ## Architecture Diagram
 
@@ -94,13 +104,15 @@ This project require some prequesites and dependenscies to be installed, you can
      MONGO_URL = <Your mongoDB url>
    ```
 
-5. Create a build directory
+5. Change API_URL to `"http://localhost:8000/v1"` in [here]("./client/src/../../../client/src/hooks/requests.js")
+
+6. Create a build directory
 
    ```sh
    npm run deploy
    ```
 
-6. Run development server
+7. Run development server
 
    ```sh
    npm run server
@@ -135,10 +147,10 @@ This project require some prequesites and dependenscies to be installed, you can
 
 ## Contributing
 
-Contributions are always welcome!
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks !
+Don't forget to give the project a star! Thanks!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -148,7 +160,7 @@ Don't forget to give the project a star! Thanks !
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Issues
+## Issues
 
 If you have error message "error:0308010C:digital envelope routines::unsupported" while running the server
 
