@@ -6,8 +6,9 @@
 ![express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+
 
 <div align="center">
   <a href="http://3.86.163.177:8000/">
@@ -104,7 +105,7 @@ This project require some prequesites and dependenscies to be installed, you can
      MONGO_URL = <Your mongoDB url>
    ```
 
-5. Change API_URL to `"http://localhost:8000/v1"` in [here]("./client/src/../../../client/src/hooks/requests.js")
+5. Change API_URL to `"http://localhost:8000/v1"` in "./client/src/hooks/requests.js"
 
 6. Create a build directory
 
