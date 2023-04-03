@@ -9,7 +9,6 @@
 ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
-
 <div align="center">
   <a href="http://3.86.163.177:8000/">
     <img src="./client/public/favicon.png" alt="project logo" width="80">
@@ -49,7 +48,7 @@
 ## About The Project
 
 NASA dashboard app for managing and monitoring spaceflights to habitable planets in the observable universe.
-![Preview](./img/preview%201.png)
+![Preview](./img/preview1.png)
 
 ## Built with
 
